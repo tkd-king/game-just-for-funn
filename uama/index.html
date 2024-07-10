@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game : Gess of random number</title>
+  </head>
+  <body>
+    <script>
+      do {
+        let chances = 0;
+        let a; 
+        const num = Math.floor(Math.random() * 100);
+        do {
+            a= prompt("Please enter your number");
+            a = Number.parseInt(a);
+            chances++;
+            if (a < num) {
+                alert(
+                    `ap ka number  ${a} h jo k less then h random number say Totale atempts: ${chances} `
+                );
+            } else if (a > num) {
+                alert(
+                    `ap ka number  ${a} h jo k greater then h random number say h Totale  atempts: ${chances} `
+                );
+            } else {
+                alert(
+                    `congrats this random number ${num} === ${a} Totale Atempts: ${chances}  `
+                );
+            }
+            
+        } while ( a!==num );
+      } while (confirm("Do you want to play again? "));
+      alert("Hamay game INJOY kanray ka leay very very  thanks ")
+
+    
+    </script>
+  </body>
+</html>
